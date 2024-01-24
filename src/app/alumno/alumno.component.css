@@ -1,0 +1,32 @@
+#header{
+    margin: 2rem;
+}
+
+#barra{
+    background: linear-gradient(rgb(97, 28, 165), rgb(196, 153, 217));
+    border-radius: 5rem;
+    padding: 2rem;
+}
+
+#titulo{
+    margin: 3rem; 
+    padding: 2rem;
+}
+#titulos{
+    text-align: start;
+}
+
+.fotocarnet{
+    width:15rem;
+    border-radius: 100%;
+}
+
+#infoCV{
+    background: linear-gradient(rgb(163, 163, 188), rgb(124, 124, 207));
+    border: 1px solid black;
+
+}
+
+.parrafos{
+    text-align: justify;
+}
