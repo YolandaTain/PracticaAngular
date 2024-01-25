@@ -19,19 +19,18 @@
             <hr>
             <br>
             <h2>Contacto</h2>
-            
+
             <ul>
                 <li>+34-622 37 24 03</li>
                 <li>mi correo</li>
                 <li>Sevilla, 41008</li>
-                <li><a href="https://www.linkedin.com/in/yolanda-tain-guti%C3%A9rrez-b3a90b142/"
-                        target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/YolandaTainGitHub" target="_blank">GitHub</a></li>
+                <li><a [href]="linkedin" target="_blank">LinkedIn</a></li>
+                <li><a [href]="gitHub" target="_blank">GitHub</a></li>
             </ul>
             <br>
             <hr>
             <br>
-            
+
             <h2>Más información</h2>
             <br>
             <ul>
@@ -39,12 +38,30 @@
                 <li>Vehículo propio.</li>
                 <li>Disponibilidad total.</li>
             </ul>
+
+            <h2>Listado de salarios</h2>
+            <li *ngFor="let salario of salarios">
+                {{salario}}€
+            </li>
+            <br>
+            <h6>Media de sueldos</h6>
+            <p>{{mediaSueldos()}}€</p>
+            <h6>Último sueldo</h6>
+            <p>{{salarios[salarios.length-1]}}€</p>
+
+            <p>Días trabajados: {{diasTrabajados}}</p>
+            <button class="btn btn-primary" (click)="aumentarDia()">Aumentar</button>
+            <button class="btn btn-secondary" (click)="disminuirDia()">Disminuir</button>
+            <br><br>
+            <h2>Disponibilidad</h2>
+            <p>{{estaActivo()==true? 'Está activo': 'Inactivo'}}</p>
         </div>
         <div class="col-12 col-md-6 col-lg-7 text-center" id="titulo">
-            <h1>Yolanda Tain Gutiérrez</h1>
+            <h1>{{nombre}} {{apellido}}</h1>
             <h2>Programadora</h2>
             <br><br>
             <h2 id="titulos">Experiencia laboral</h2>
+            <br>
             <h6 id="titulos">Consultora IT Responsable Andalucía</h6>
             <h6 id="titulos">ieducando S.L. Sevilla | Julio 2018 / Septiembre 2022</h6>
             <p class="parrafos">Experiencia con productos y servicios Google For Education.
@@ -58,6 +75,23 @@
             <hr>
 
             <h2 id="titulos">Datos académicos</h2>
+            <br>
+            <h6 id="titulos">GRADO SUPERIOR EN DESARROLLO DE APLICACIONES WEB</h6>
+            <h6 id="titulos">MEDAC Sevilla | 2023-Actual</h6>
+            <ul class="text-start">
+
+                <li><b>BACK END: </b>PHP (SYMFONY), NODE (EXPRESS) , JAVA (SPRING), PYTHON
+                    (DJANGO)</li>
+                <li><b>DESPLIEGUE WEB:</b> DOCKER, SERVIDORES APACHE Y NGINX, DESPLIEGUE CON
+                    JENKINS Y KUBERNETES.</li>
+                <li><b>FRONT END:</b> HTML, CSS, BOOTSTRAP, SASS, JAVASCRIPT, JQUERY, ANGULAR,
+                    REACT.</li>
+                <li><b>BBDD:</b> MYSQL, MONGODB.</li>
+                <li><b>OTROS:</b> GIT, PROTOCOLO HTTP, API REST FULL, WEBSOCKETS.</li>
+            </ul>
+            <br>
+            <hr>
+
             <h6 id="titulos">GRADO SUPERIOR EN ADMINISTRACIÓN Y FINANZAS</h6>
             <h6 id="titulos">Fundación Vedruna Sevilla | Septiembre 2017</h6>
             <p class="parrafos">Desarrollo de proyecto empresarial. Control de herramientas contables así como
@@ -66,11 +100,13 @@
             <hr>
 
             <h2 id="titulos">GRADO EN HISTORIA DEL ARTE</h2>
+            <br>
             <h6 id="titulos">Universidad de Sevilla | Septiembre 2015</h6>
             <br>
             <hr>
 
             <h2 id="titulos">Otros</h2>
+            <br>
             <h6 id="titulos">Udemy</h6>
             <ul id="titulos">
                 <li>Creación de Spotify con Angular</li>
@@ -80,7 +116,9 @@
             <hr>
 
             <h2 id="titulos">Idiomas</h2>
+            <br>
             <h6 id="titulos">Inglés: B2 Cambdrige</h6>
+            <br>
         </div>
     </div>
 </div>

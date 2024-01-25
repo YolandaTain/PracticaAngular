@@ -7,6 +7,7 @@ import { EmpresaComponent } from './empresa/empresa.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { ModelsComponent } from './models/models.component';
 import { AlumnoComponent } from './alumno/alumno.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AlumnoComponent } from './alumno/alumno.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     //provideClientHydration()
