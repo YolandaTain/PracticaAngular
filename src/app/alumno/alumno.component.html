@@ -50,8 +50,8 @@
             <p>{{salarios[salarios.length-1]}}€</p>
 
             <p>Días trabajados: {{diasTrabajados}}</p>
-            <button class="btn btn-primary" (click)="aumentarDia()">Aumentar</button>
-            <button class="btn btn-secondary" (click)="disminuirDia()">Disminuir</button>
+            <button class="btn btn-success" (click)="aumentarDia()">Aumentar días</button>
+            <button class="btn btn-danger" (click)="disminuirDia()">Disminuir días</button>
             <br><br>
             <h2>Disponibilidad</h2>
             <p>{{estaActivo()==true? 'Está activo': 'Inactivo'}}</p>
