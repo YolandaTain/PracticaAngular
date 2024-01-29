@@ -14,7 +14,7 @@ export class AlumnoComponent {
   activo: Boolean = true;
   linkedin: String = "https://www.linkedin.com/in/yolanda-tain-guti%C3%A9rrez-b3a90b142/";
   gitHub: String = "https://github.com/YolandaTainGitHub";
-  diasTrabajados: number = 200;
+  diasTrabajados: number = 0;
 
   estaActivo(): Boolean {
     /*if (this.activo) {

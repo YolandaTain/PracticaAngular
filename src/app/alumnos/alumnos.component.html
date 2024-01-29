@@ -1,0 +1,40 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Alumnos</div>
+    <div class="card-body text-primary">
+        <h5 class="card-title">Listado de alumnos</h5>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr class= text-center>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Nombre Correo</th>
+                    <th>Apellido Correo</th>
+                    <th>Email</th>
+                    <th>Edad</th>
+                    <th>Salarios</th>
+                    <th>Activo</th>
+                    <th>LinkedIn</th>
+                    <th>GitHub</th>
+                    <th>Días Trabajados</th>
+                    <th>Centro de Estudios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let alumno of alumnos" class= text-center>
+                    <td>{{alumno.nombre}}</td>
+                    <td>{{alumno.apellido}}</td>
+                    <td>{{alumno.nombreCorreo}}</td>
+                    <td>{{alumno.apellidoCorreo}}</td>
+                    <td>{{alumno.email}}</td>
+                    <td>{{alumno.edad}}</td>
+                    <td>{{ mediaSueldos(alumno) }}</td>
+                    <td>{{ estaActivo(alumno) }}</td>
+                    <td><a [href]="alumno.linkedin" target="_blank">{{alumno.linkedin}}</a></td>
+                    <td><a [href]="alumno.gitHub" target="_blank">{{alumno.gitHub}}</a></td> 
+                    <td><button (click)="aumentarDia(alumno)">+</button>{{alumno.diasTrabajados}}<button (click)="disminuirDia(alumno)">-</button></td>    
+                    <td>{{alumno.centroEstudios}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
